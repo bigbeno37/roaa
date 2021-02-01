@@ -9,7 +9,7 @@
   },
   "Grounded Movement": {
     "Ground Friction": "0.63",
-    "Inital Dash Speed": "4 px/frame",
+    "Initial Dash Speed": "4 px/frame",
     "Initial Dash Time": "8 frames",
     "Run Speed": "6.25 px/frame",
     "Run Stop Time": "4 frames",

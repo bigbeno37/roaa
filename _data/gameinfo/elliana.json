@@ -1,0 +1,257 @@
+{
+  "weight": {
+    "knockbackAdjustment": 0.90,
+    "gravityAcceleration": 0.40,
+    "hitstunGravityAcceleration": 0.45,
+    "airFriction": 0.05,
+    "maxFallSpeed": 9,
+    "fastFallSpeed": 11
+  },
+  "movement": {
+    "grounded": {
+      "friction": 0.65,
+      "dash": {
+        "initial": {
+          "speed": 5.5,
+          "time": 8
+        },
+        "speed": 5.5,
+        "stop": 6,
+        "turn": {
+          "time": 12,
+          "deceleration": 1
+        }
+      },
+      "walk": {
+        "speed": 3,
+        "acceleration": 0.2,
+        "turn": 6
+      },
+      "waveland": {
+        "time": 8,
+        "friction": 0.12
+      }
+    },
+    "aerial": {
+      "maxHorizontalSpeed": 6,
+      "airdodge": {
+        "startup": 2,
+        "active": 12,
+        "recovery": 12,
+        "speed": 8
+      },
+      "jump": {
+        "start": 5,
+        "speed": 9.99,
+        "shortHopSpeed": 5,
+        "maxHorizontalSpeed": 8
+      },
+      "doubleJump": {
+        "amount": 0,
+        "speed": 6
+      },
+      "walljump": {
+        "verticalSpeed": 8,
+        "horizontalSpeed": 7
+      }
+    }
+  },
+  "hurtbox": {
+    "idle": {
+      "height": 64,
+      "width": 80
+    },
+    "hitstun": {
+      "height": 64,
+      "width": 80
+    },
+    "crouch": {
+      "height": 34,
+      "width": 80
+    }
+  },
+  "jab": {
+    "startup": 4,
+    "active": {
+      "from": 5,
+      "to": 6
+    },
+    "endlag": {
+      "hit": 13,
+      "whiff": 20
+    },
+    "FAF": 27,
+    "damage": 5,
+    "angle": 361,
+    "knockback": {
+      "base": 7,
+      "scaling": 55
+    },
+    "priority": 6,
+    "hitstunModifier": 1,
+    "hitpause": {
+      "base": 8,
+      "scaling": 50
+    },
+    "angleFlipper": 0,
+    "killsProjectiles": true,
+    "notes": "6 frames hit lockout"
+  },
+  "dashAttack": [
+    {
+      "name": "Hit 1",
+      "startup": 6,
+      "active": {
+        "from": 7,
+        "to": 9
+      },
+      "damage": 2,
+      "angle": 40,
+      "knockback": {
+        "base": 7,
+        "scaling": 40
+      },
+      "priority": 2,
+      "hitstunModifier": 1,
+      "hitpause": {
+        "base": 4,
+        "scaling": 30
+      },
+      "angleFlipper": 0,
+      "killsProjectiles": true
+    },
+    {
+      "name": "Hit 2",
+      "active": {
+        "from": 13,
+        "to": 15
+      },
+      "damage": 2,
+      "angle": 40,
+      "knockback": {
+        "base": 7,
+        "scaling": 40
+      },
+      "priority": 2,
+      "hitstunModifier": 1,
+      "hitpause": {
+        "base": 4,
+        "scaling": 30
+      },
+      "angleFlipper": 0,
+      "killsProjectiles": true
+    },
+    {
+      "name": "Hit 3",
+      "active": {
+        "from": 19,
+        "to": 21
+      },
+      "endlag": {
+        "hit": 19,
+        "whiff": 27
+      },
+      "FAF": 49,
+      "damage": 2,
+      "angle": 40,
+      "knockback": {
+        "base": 7,
+        "scaling": 40
+      },
+      "priority": 2,
+      "hitstunModifier": 1,
+      "hitpause": {
+        "base": 4,
+        "scaling": 30
+      },
+      "angleFlipper": 0,
+      "killsProjectiles": true,
+      "notes": "Adds heat on loop, see overheat mechanic. Holding attack on the 3rd frame of endlag after the third hit of dash attack will cause the attack to extend for one further hit. If attack is not held then the endlag will begin."
+    }
+  ],
+  "forward": {
+    "tilt": [
+      {
+        "name": "Hit 1",
+        "startup": 7,
+        "active": {
+          "from": 8,
+          "to": 10
+        },
+        "damage": 2,
+        "angle": 70,
+        "knockback": {
+          "base": 3,
+          "scaling": 0
+        },
+        "priority": 2,
+        "hitstunModifier": 1,
+        "hitpause": {
+          "base": 5,
+          "scaling": 0
+        },
+        "angleFlipper": 0,
+        "killsProjectiles": true
+      },
+      {
+        "name": "Hit 2",
+        "startup": 7,
+        "active": {
+          "from": 14,
+          "to": 16
+        },
+        "damage": 2,
+        "angle": 70,
+        "knockback": {
+          "base": 3,
+          "scaling": 0
+        },
+        "priority": 2,
+        "hitstunModifier": 1,
+        "hitpause": {
+          "base": 5,
+          "scaling": 0
+        },
+        "angleFlipper": 0,
+        "killsProjectiles": true,
+        "notes": "Adds heat on loop, see overheat mechanic. Holding attack on the 3rd frame of endlag after the second hit of the loop will cause the loop to extend for another two hits. If attack is not held then the startup for the finisher hit will begin."
+      },
+      {
+        "name": "Finisher",
+        "startup": 6,
+        "active": {
+          "from": 26,
+          "to": 28
+        },
+        "endlag": {
+          "hit": 14,
+          "whiff": 21
+        },
+        "FAF": 50,
+        "damage": 5,
+        "angle": 50,
+        "knockback": {
+          "base": 8,
+          "scaling": 45
+        },
+        "priority": 5,
+        "hitstunModifier": 1,
+        "hitpause": {
+          "base": 8,
+          "scaling": 40
+        },
+        "angleFlipper": 0,
+        "killsProjectiles": true,
+        "notes": "Finisher occurs 9 frames after last active frame of the loop; 38-40, 50-52, 52-64..."
+      }
+    ]
+  },
+  "up": {
+    "tilt": [
+      {
+        "name": "Hit 1",
+
+      }
+    ]
+  }
+}
